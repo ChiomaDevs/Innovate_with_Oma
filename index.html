@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Innovate with Oma – Practical AI to Save 1–2 Hours/Week</title>
+  <meta name="description" content="Learn to apply AI at home and at work in a 4‑session live sprint. Beginner‑friendly, hands‑on, with ready‑to‑use templates." />
+
+  <!-- OG / Twitter -->
+  <meta property="og:title" content="Innovate with Oma – Practical AI to Save 1–2 Hours/Week" />
+  <meta property="og:description" content="Learn to apply AI at home and at work in a 4‑session live sprint. Beginner‑friendly, hands‑on, with ready‑to‑use templates." />
+  <meta property="og:image" content="/og-image-placeholder.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preload heading font (swap to your own if desired) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-primary: #7C3AED; /* {{brand_primary_hex}} */
+      --brand-secondary:#10B981; /* {{brand_secondary_hex}} */
+      --brand-accent:   #F59E0B; /* {{brand_accent_hex}} */
+      --bg: #FFFFFF; --bg-muted:#F8FAFC; --text:#0F172A; --muted:#475569; --border:#E2E8F0;
+      --radius: 14px; --shadow: 0 10px 30px rgba(2,8,23,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
+    h1,h2,h3{font-family:Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;line-height:1.2;margin:0 0 .5rem}
+    h1{font-size:clamp(2rem,4vw,3rem);}
+    h2{font-size:clamp(1.5rem,3vw,2rem);}
+    h3{font-size:clamp(1.15rem,2vw,1.4rem);}
+    p{color:var(--muted);margin:.25rem 0 .75rem}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{font-weight:700;color:var(--text);text-decoration:none;font-family:Poppins}
+    .logo span{color:var(--brand-primary)}
+    .nav a{color:var(--text);text-decoration:none;margin:0 10px;font-weight:600;font-size:.95rem}
+    .nav a.cta{padding:10px 14px;background:var(--brand-primary);color:#fff;border-radius:10px}
+    .announce{background:var(--bg-muted);border-bottom:1px solid var(--border);font-weight:600}
+    .announce .bar{display:flex;gap:10px;align-items:center;justify-content:center;padding:10px}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:999px;background:#fff}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--brand-primary);color:#fff}
+    .btn-secondary{background:#fff;color:var(--brand-primary);border:2px solid var(--brand-primary)}
+    .btn-ghost{border:1px solid var(--border);background:#fff}
+    .hero{padding:60px 0;background:linear-gradient(180deg,#fff 0%, #fafbff 70%)}
+    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+    .badge{color:#fff;background:linear-gradient(90deg,var(--brand-primary),var(--brand-secondary));padding:6px 10px;border-radius:999px;font-size:.8rem;display:inline-flex;gap:8px;align-items:center}
+    .tagline{display:flex;gap:12px;align-items:center;margin:10px 0 16px}
+    .tagline small{color:#334155}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .hero-img{width:100%;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .section{padding:70px 0}
+    .grid{display:grid;gap:20px}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .card{border:1px solid var(--border);border-radius:var(--radius);padding:18px;background:#fff;box-shadow:var(--shadow)}
+    .muted{color:var(--muted)}
+    .list{padding-left:18px}
+    .pill{background:#EEF2FF;color:#3730A3;border-radius:999px;padding:4px 10px;font-weight:700;font-size:.8rem;display:inline-block}
+    .two-col{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .cta-band{background:linear-gradient(180deg,#fafbff, #fff);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .footer{background:#0B1020;color:#E2E8F0;padding:40px 0}
+    .footer a{color:#E2E8F0;text-decoration:none;margin-right:12px}
+    .footer small{color:#94A3B8}
+    .faq details{border:1px solid var(--border);border-radius:var(--radius);padding:14px;background:#fff}
+    .faq details+details{margin-top:10px}
+    .hide{display:none}
+
+    /* Simple responsive tweaks */
+    @media (max-width: 900px){
+      .hero-wrap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announce" aria-label="announcement">
+    <div class="container bar">
+      <span class="pill">Next Cohort</span>
+      <span>Next cohort starts <strong>15 November 2025</strong> – 20% off for early sign‑ups.</span>
+      <a href="#signup" class="btn btn-ghost" aria-label="Save my spot (announcement)">Save my spot</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="logo" href="#home" aria-label="Innovate with Oma home"><span>Innovate</span> with Oma</a>
+      <div>
+        <a href="#program">Program</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="#community">Join Community</a>
+        <a href="#signup" class="cta" aria-label="Join the next cohort (nav)">Join</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <span class="badge" aria-label="Beginner friendly, templates included">Beginner friendly • Live & recorded • Templates included</span>
+        <h1>Practical AI to win back 1–2 hours every week</h1>
+        <p class="muted">A 4‑session, hands‑on sprint to apply AI at <strong>home and work</strong>—no tech background needed.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#signup" data-evt="cta_click">Join the next cohort</a>
+          <a class="btn btn-secondary" href="#video" data-evt="video_play">Watch a 60‑sec overview</a>
+        </div>
+        <div class="tagline" aria-label="trust cues">
+          <small>Trusted by busy professionals, parents, and students.</small>
+        </div>
+      </div>
+      <figure class="hero-img">
+        <img src="./assets/hero.jpg" alt="People learning together in a bright workspace, using laptops and notes" style="width:100%;height:auto;display:block" loading="lazy" />
+      </figure>
+    </div>
+  </header>
+
+  <!-- What You’ll Get -->
+  <section class="section" aria-labelledby="what-you-get">
+    <div class="container">
+      <h2 id="what-you-get">What you’ll get</h2>
+      <p class="muted">Simple, repeatable systems you can use the same day.</p>
+      <div class="grid cards" role="list">
+        <div class="card" role="listitem"><h3>Ready‑to‑use prompts & templates</h3><p>Copy, paste, and personalize for your tasks.</p></div>
+        <div class="card" role="listitem"><h3>One‑click routines for docs/sheets</h3><p>Turn messy inputs into clean outputs—fast.</p></div>
+        <div class="card" role="listitem"><h3>Your personal AI operating system</h3><p>Weekly workflows for planning, writing, and reviewing.</p></div>
+        <div class="card" role="listitem"><h3>Live demos + replays</h3><p>Follow along, then rewatch in your own time.</p></div>
+        <div class="card" role="listitem"><h3>Community support</h3><p>Ask questions, share wins, and get unstuck.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Snapshot -->
+  <section id="program" class="section" aria-labelledby="program-snapshot">
+    <div class="container">
+      <h2 id="program-snapshot">Program snapshot (4 sessions)</h2>
+      <div class="grid cards">
+        <div class="card"><h3>S1 — Foundations & Fast Wins</h3><p>Score your first time savings in 15 minutes.</p></div>
+        <div class="card"><h3>S2 — Prompt Systems for Reliability</h3><p>Build reusable SOP prompts that work every time.</p></div>
+        <div class="card"><h3>S3 — AI + Docs & Data</h3><p>Practical, no‑code automations with docs/sheets.</p></div>
+        <div class="card"><h3>S4 — Capstone</h3><p>Deploy your personal AI workflow map.</p></div>
+      </div>
+      <p><a href="#program-full" aria-label="View full curriculum link">View full curriculum →</a></p>
+    </div>
+  </section>
+
+  <!-- Who It’s For -->
+  <section class="section" aria-labelledby="who-for">
+    <div class="container two-col grid">
+      <div>
+        <h2 id="who-for">Who it’s for</h2>
+        <ul class="list">
+          <li>Busy professionals</li>
+          <li>Parents and caregivers</li>
+          <li>Students & job‑seekers</li>
+          <li>Solopreneurs & small teams</li>
+        </ul>
+      </div>
+      <div>
+        <p class="muted">No AI experience required. We walk you through step‑by‑step, with practical exercises for <strong>home and work</strong> scenarios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes & Proof -->
+  <section id="outcomes" class="section" aria-labelledby="outcomes-proof">
+    <div class="container">
+      <h2 id="outcomes-proof">Outcomes & proof</h2>
+      <p><strong>Typical wins:</strong> save <strong>60–120 minutes/week</strong> by week 2.</p>
+      <div class="grid two-col">
+        <figure class="card"><img src="/template-screenshot-1.jpg" alt="Example template output: weekly status report" loading="lazy" style="width:100%;height:auto;display:block"/></figure>
+        <figure class="card"><img src="/template-screenshot-2.jpg" alt="Example template output: household meal plan and shopping list" loading="lazy" style="width:100%;height:auto;display:block"/></figure>
+      </div>
+      <div class="grid cards" style="margin-top:20px">
+        <div class="card"><p>“I automated our weekly update and saved 90 minutes.”</p><p class="muted">— <strong>Test User</strong>, Operations</p></div>
+        <div class="card"><p>“My family rota finally runs itself. Total game‑changer.”</p><p class="muted">— <strong>Another User</strong>, Parent</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Cohort -->
+  <section class="section" aria-labelledby="upcoming-cohort">
+    <div class="container">
+      <h2 id="upcoming-cohort">Upcoming cohort</h2>
+      <div class="card">
+        <p><strong>Dates:</strong> Tue & Thu evenings for 2 weeks (1 hour each) starting <strong>15 November 2025</strong></p>
+        <p><strong>Format:</strong> Live on Zoom/Teams • <strong>Capacity:</strong> 30 • <strong>Price:</strong> Free Pilot</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#signup" data-evt="cta_click">Save my spot</a>
+          <a class="btn btn-ghost" href="#calendar" aria-label="Add to calendar">Add to Calendar (Google/Outlook)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Syllabus Download + Lead Magnet -->
+  <section class="section" aria-labelledby="syllabus">
+    <div class="container two-col grid">
+      <div>
+        <h2 id="syllabus">Get the 1‑page syllabus</h2>
+        <p class="muted">We’ll send a one‑page PDF with the curriculum, dates, and what to bring.</p>
+      </div>
+      <form id="lead" class="card" aria-label="Email capture form">
+        <label for="lead-email">Email</label>
+        <input id="lead-email" name="email" type="email" required placeholder="you@example.com" style="width:100%;padding:12px;margin:8px 0;border:1px solid var(--border);border-radius:10px" />
+        <label for="lead-consent" class="muted" style="display:flex;gap:8px;align-items:center;margin:8px 0">
+          <input id="lead-consent" type="checkbox" required /> I agree to receive updates and the syllabus.
+        </label>
+        <button class="btn btn-primary" type="submit" data-evt="form_submit">Email me the syllabus</button>
+        <p id="lead-success" class="muted" role="status" aria-live="polite" style="margin-top:8px;display:none">Thanks! Check your inbox for the syllabus link.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sign-up Form -->
+  <section id="signup" class="section" aria-labelledby="signup-title">
+    <div class="container">
+      <h2 id="signup-title">Join the next cohort</h2>
+      <form id="signup-form" class="card" aria-describedby="signup-note">
+        <div class="grid two-col">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name" style="width:100%;padding:12px;margin:8px 0;border:1px solid var(--border);border-radius:10px" />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" style="width:100%;padding:12px;margin:8px 0;border:1px solid var(--border);border-radius:10px" />
+          </div>
+        </div>
+        <div class="grid two-col">
+          <div>
+            <label for="role">Role</label>
+            <select id="role" name="role" required style="width:100%;padding:12px;margin:8px 0;border:1px solid var(--border);border-radius:10px">
+              <option value="" selected disabled>Select your role</option>
+              <option>Professional</option>
+              <option>Parent/Caregiver</option>
+              <option>Student/Job‑seeker</option>
+              <option>Solopreneur</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="goal">Biggest task you want to improve</label>
+            <input id="goal" name="goal" type="text" required placeholder="e.g., weekly report, meal plan, budgeting" style="width:100%;padding:12px;margin:8px 0;border:1px solid var(--border);border-radius:10px" />
+          </div>
+        </div>
+        <label for="consent" class="muted" style="display:flex;gap:8px;align-items:center;margin:8px 0">
+          <input id="consent" type="checkbox" required /> I agree to receive cohort details and emails. (Double opt‑in enabled.)
+        </label>
+        <button type="submit" class="btn btn-primary" data-evt="form_submit">Save my spot</button>
+        <p id="signup-success" class="muted" role="status" aria-live="polite" style="margin-top:8px;display:none">Success! Please check your email to confirm your spot.</p>
+        <p id="signup-note" class="muted">We’ll never share your information. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="section faq" aria-labelledby="faq-title">
+    <div class="container">
+      <h2 id="faq-title">FAQs</h2>
+      <details><summary><strong>Do I need any AI experience?</strong></summary><p>No. We start from the basics and guide you step‑by‑step.</p></details>
+      <details><summary><strong>Will sessions be recorded?</strong></summary><p>Yes. Replays are available within 24 hours.</p></details>
+      <details><summary><strong>Can I get a refund?</strong></summary><p>If you can’t attend the first week, we’ll move you to the next cohort.</p></details>
+      <details><summary><strong>Do I get a certificate?</strong></summary><p>Yes—on completion of the 4th session.</p></details>
+      <details><summary><strong>What tools do I need?</strong></summary><p>Any modern browser, a notes app, and access to an AI assistant (free tiers are fine).</p></details>
+      <details><summary><strong>Is it accessible?</strong></summary><p>We follow WCAG 2.1 AA guidance. Tell us if you need accommodations.</p></details>
+      <details><summary><strong>How do I pay?</strong></summary><p>This cohort is a Free Pilot. Future pricing will be listed on the site.</p></details>
+      <details><summary><strong>Where can I get help?</strong></summary><p>Join the community or email us at <a href="mailto:hello@innovatewithoma.com">hello@innovatewithoma.com</a>.</p></details>
+    </div>
+  </section>
+
+  <!-- Join the Community -->
+  <section id="community" class="section" aria-labelledby="community-title">
+    <div class="container two-col grid">
+      <div>
+        <h2 id="community-title">Join the community</h2>
+        <p class="muted">Ask questions, share wins, and get support between sessions.</p>
+        <a class="btn btn-secondary" href="#" aria-label="Join WhatsApp or Slack community">Join on WhatsApp/Slack</a>
+      </div>
+      <div class="card">
+        <h3>Guidelines</h3>
+        <ul class="list">
+          <li>Be kind and specific.</li>
+          <li>No spam or DMs without consent.</li>
+          <li>Share actionable tips and examples.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Band -->
+  <section class="section cta-band" aria-labelledby="final-cta">
+    <div class="container">
+      <h2 id="final-cta">Practical AI for home and work—save 1–2 hours each week</h2>
+      <p class="muted">Beginner‑friendly, live and recorded, with ready‑to‑use templates.</p>
+      <a class="btn btn-primary" href="#signup" data-evt="cta_click">Join the next cohort</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start">
+        <div>
+          <strong>Innovate with Oma</strong>
+          <p class="muted">Contact: <a href="mailto:hello@innovatewithoma.com">hello@innovatewithoma.com</a></p>
+          <div>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Media Kit</a>
+          <a href="#">Partners</a>
+          <a href="#">Speaking</a>
+        </div>
+      </div>
+      <div style="margin-top:16px"><small>© <span id="year"></span> Innovate with Oma. All rights reserved.</small></div>
+    </div>
+  </footer>
+
+  <!-- Schema.org: Course + Event -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Innovate with Oma – AI Productivity Sprint",
+    "description":"A beginner‑friendly, hands‑on program to apply AI for productivity at home and at work.",
+    "provider":{"@type":"Organization","name":"Innovate with Oma","sameAs":""},
+    "hasCourseInstance": {
+      "@type":"CourseInstance",
+      "courseMode":"Online",
+      "startDate":"2025-11-15",
+      "endDate":"2025-11-27"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Event",
+    "name":"Innovate with Oma – Upcoming Cohort",
+    "startDate":"2025-11-15T18:00:00+04:00",
+    "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
+    "eventStatus":"https://schema.org/EventScheduled",
+    "location":{"@type":"VirtualLocation","url":""},
+    "performer":{"@type":"Person","name":"Oma"},
+    "organizer":{"@type":"Organization","name":"Innovate with Oma","url":""},
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"}
+  }
+  </script>
+
+  <!-- Simple JS: analytics placeholders, form handlers, year, accessibility niceties -->
+  <script>
+    // GA4 placeholder (replace G-XXXX):
+    // window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXX');
+
+    // Basic event tracker without GA (still useful):
+    document.querySelectorAll('[data-evt]').forEach(el=>{
+      el.addEventListener('click',()=>{ console.log('event:', el.dataset.evt, {text: el.textContent.trim()}); });
+    });
+
+    // Mailchimp/ConvertKit integration NOTE:
+    // Replace the two handlers below with your provider's embed code.
+    // For now, we show friendly success messages and log to console.
+
+    const leadForm = document.getElementById('lead');
+    leadForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      document.getElementById('lead-success').style.display='block';
+      console.log('Lead form submitted', Object.fromEntries(new FormData(leadForm)));
+      leadForm.reset();
+    });
+
+    const signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      document.getElementById('signup-success').style.display='block';
+      console.log('Signup form submitted', Object.fromEntries(new FormData(signupForm)));
+      signupForm.reset();
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- EDITOR’S GUIDE (quick how‑to) -->
+  <section class="section" id="editors-guide" aria-labelledby="guide-title">
+    <div class="container card">
+      <h2 id="guide-title">Editor’s Guide: how to update this page (no code)</h2>
+      <ol class="list">
+        <li><strong>Change colors/fonts:</strong> at the top of this file in <code>:root</code>, edit <code>--brand-primary</code>, <code>--brand-secondary</code>, <code>--brand-accent</code>. Fonts are loaded from Google Fonts—swap names in the <code>&lt;link&gt;</code> and CSS font-family lists.</li>
+        <li><strong>Update dates/capacity/price:</strong> find the “Upcoming cohort” section and edit the text. Also update the JSON‑LD <code>startDate</code> and <code>offers.price</code> if needed.</li>
+        <li><strong>Connect email tool (Mailchimp/ConvertKit):</strong> replace the forms (<code>#lead</code> and <code>#signup-form</code>) with your provider’s embed form code. Keep the same fields: name, email, role, goal. Add tag <code>InnovateWithOma/Waitlist</code>.</li>
+        <li><strong>Add images:</strong> replace the placeholder <code>src</code> paths (hero and screenshots). Use descriptive <code>alt</code> text. Compress to <code>.webp</code>.</li>
+        <li><strong>Add FAQs/Testimonials/Blog:</strong> duplicate the existing items now. If you move to a CMS (Wix/Webflow/Framer/WordPress), create collections with fields listed in the spec and bind these sections to them.</li>
+        <li><strong>Analytics:</strong> paste your GA4 snippet and replace <code>G-XXXX</code>. Optional: add Meta Pixel.</li>
+        <li><strong>Publish fast:</strong> a) In Wix/Webflow/Framer—create a page and paste sections using their visual editor; or b) For a quick static site, upload this single file as <code>index.html</code> to Netlify/Cloudflare Pages/GitHub Pages.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FUTURE STUBS (these can become full pages) -->
+  <section id="program-full" class="section hide"><div class="container"><h2>Program (Full Curriculum)</h2><p>Stub page to be expanded later.</p></div></section>
+  <section id="blog" class="section hide"><div class="container"><h2>Blog</h2><p>Stub page to be expanded later.</p></div></section>
+</body>
+</html>
